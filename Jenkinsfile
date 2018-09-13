@@ -2,7 +2,7 @@ pipeline{
  agent any
  stages{
   stage('build') {
-   step {
+   steps {
     sh './gradlew build --no-deamon'
     archiveArtifacts artifacts: 'dist/trainSchedule.zip'
     }
